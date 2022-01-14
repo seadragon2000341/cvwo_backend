@@ -40,6 +40,13 @@ group :development do
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
+  gem 'capistrano'
+gem 'capistrano-bundler'
+gem 'capistrano-passenger', '>= 0.1.1'
+gem 'capistrano-rails'
+gem 'capistrano-rvm'
+gem 'capistrano-figaro-yml', '~> 1.0.2'
+gem "figaro"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
