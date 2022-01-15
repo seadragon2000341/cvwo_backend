@@ -59,11 +59,11 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-role :app, %w{deploy_user@18.138.248.56}
-role :web, %w{deploy_user@18.138.248.56}
-role :db,  %w{deploy_user@18.138.248.56}
+role :app, %w{cvwo@18.138.248.56}
+role :web, %w{cvwo@18.138.248.56}
+role :db,  %w{cvwo@18.138.248.56}
 set :ssh_options, {
-   keys: %w("C:\Users\limha\Desktop\cvwo.pem"),
+   keys: %w(C:\Users\limha\Desktop\cvwo.pem),
    forward_agent: false,
    auth_methods: %w(publickey password)
  }
