@@ -20,13 +20,11 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: postgres
-  password: <%= ENV['TASKMANAGER_PASSWORD'] %>
+
 
 development:
   <<: *default
   database: task_manager_db_development
-
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -83,6 +81,8 @@ test:
 #
 production:
   <<: *default
-  database: task_manager_db_production
-  username: task_manager_db
-  password: <%= ENV['TASK_MANAGER_DB_DATABASE_PASSWORD'] %>
+  database: task_manager_production
+  username: postgres
+  password: <%= ENV['TASK_MANAGER_DATABASE_PASSWORD'] %>
+  host: <%= ENV['TASK_MANAGER_DATABASE_HOST'] %>
+  port: <%= ENV['TASK_MANAGER_DATABASE_PORT'] %>
