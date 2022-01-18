@@ -1,11 +1,13 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.16.0"
 set :application, "task_manager"
-set :linked_files, fetch(:linked_files, []).push('config/application.yml')
+set :deploy_to, "/home/cvwo/#{fetch :application}"
 set :repo_url, "git@github.com:seadragon2000341/cvwo_backend.git"
-set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
+
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
 set :rvm_ruby_version, '3.0.3'
-set :passenger_restart_with_touch, true
+set :keep_releases, 5
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 

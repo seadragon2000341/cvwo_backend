@@ -59,9 +59,9 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-role :app, %w{cvwo@18.138.248.56}
-role :web, %w{cvwo@18.138.248.56}
-role :db,  %w{cvwo@18.138.248.56}
+role :app, %w{ubuntu@54.169.72.226}
+role :web, %w{ubuntu@54.169.72.226}
+role :db,  %w{ubuntu@54.169.72.226}
 set :ssh_options, {
    keys: %w(C:\Users\limha\Desktop\cvwo.pem),
    forward_agent: false,
