@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.16.0"
 set :application, "task_manager"
-set :deploy_to, "/home/cvwo/#{fetch :application}"
+set :deploy_to, "/home/ubuntu/#{fetch :application}"
 set :repo_url, "git@github.com:seadragon2000341/cvwo_backend.git"
 
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
