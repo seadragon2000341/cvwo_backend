@@ -14,7 +14,6 @@ class Api::TasksController < ApplicationController
     end
   
     def update
-      #task = Task.update(task_params)
       if task.update(task_params)
         render json: task
       else
@@ -25,7 +24,7 @@ class Api::TasksController < ApplicationController
     def destroy
       task&.destroy
       render json: task
-      # json: { message: 'Task deleted!' }
+   
     end
     private
   #only allow for a list of trusted params

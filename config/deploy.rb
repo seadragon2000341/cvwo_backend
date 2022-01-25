@@ -3,7 +3,6 @@ lock "~> 3.16.0"
 set :application, "task_manager"
 set :deploy_to, "/home/ubuntu/#{fetch :application}"
 set :repo_url, "git@github.com:seadragon2000341/cvwo_backend.git"
-
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
 set :rvm_ruby_version, '3.0.3'
 set :keep_releases, 5
