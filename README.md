@@ -1,3 +1,7 @@
+Name: Lim Hai Leong Shawn Matriculation number: A0237976J
+
+Link to frontend and writeup: https://github.com/seadragon2000341/cvwo_frontend
+
 # README
 
 This README would normally document whatever steps are necessary to get the
